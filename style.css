@@ -1,0 +1,478 @@
+/* generic elements */
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+button {
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* re-usable components */
+
+.rsc-clearfix {
+  clear: both;
+}
+
+.rsc-link {
+  text-decoration: none;
+  color: #90c040;
+}
+
+.rsc-link:hover {
+  text-decoration: underline;
+}
+
+.rsc-player-count {
+  font-size: 14px;
+  margin: 4px auto 4px;
+}
+
+.rsc-container {
+  background: url(/res/border-left.png) repeat-y, 
+    url(/res/border-right.png) repeat-y, url(/res/background.png) repeat;
+  background-position: 0 43px, right 43px;
+  margin: 20px auto 0 auto;
+  max-width: 816px;
+  min-width: 338px;
+  position: relative;
+}
+
+.rsc-wrap {
+  min-height: 480px;
+  padding: 4px 42px 14px 42px;
+  text-align: center;
+}
+
+.rsc-box {
+  background-color: #000;
+  border: 2px solid #382418;
+  box-sizing: border-box;
+  margin: auto auto 8px auto;
+  outline: 2px solid #000;
+  padding: 4px;
+}
+
+.rsc-stone-box {
+  background: url(/res/stone-background.png);
+  border: 3px outset #373737;
+  box-sizing: border-box;
+  padding: 4px 4px 16px 4px;
+  margin: auto auto 8px auto;
+}
+
+.rsc-stone-box label {
+  display: block;
+  font-weight: bold;
+}
+
+.rsc-stone-box input[type="text"], .rsc-stone-box input[type="number"] {
+  box-sizing: border-box;
+  display: block;
+  height: 26px;
+  width: 100%;
+}
+
+.rsc-header {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 250px;
+  width: 40%;
+}
+
+.rsc-footer {
+  background-color: #000;
+  box-sizing: border-box;
+  font-size: 11px;
+  margin-bottom: -32px;
+  margin-left: 100px;
+  text-align: center;
+  width: calc(100% - 200px);
+}
+
+.rsc-logo {
+  margin-top: 16px;
+}
+
+.rsc-scroll {
+  background: url(/res/scroll.png) no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  font-size: 11px;
+  margin: auto;
+  max-width: 516px;
+  min-height: 82px;
+  padding: 24px 10% 0 10%;
+  position: relative;
+}
+
+.rsc-scroll select {
+  background-color: #b1977e;
+  max-width: 100%;
+}
+
+/* rows and cols */
+
+.rsc-row {
+  display: flex;
+  padding: 0 4% 0 4%;
+}
+
+.rsc-col {
+  box-sizing: border-box;
+}
+
+.rsc-col-36 {
+  width: 36%;
+  padding: 0 4% 0 4%;
+}
+
+.rsc-col-64 {
+  width: 64%;
+  padding: 0 4% 0 4%;
+}
+
+.rsc-col-50 {
+  width: 50%;
+  padding: 0 2% 0 2%;
+}
+
+/* borders */
+
+.rsc-border-top {
+  height: 43px;
+  background-image: url(/res/border-top-left-edge.png), 
+    url(/res/border-badge.png), url(res/border-top-right-edge.png);
+  background-repeat: no-repeat;
+  background-position-x: 0, 50%, 99.95%;
+}
+
+.rsc-border-bottom {
+  background: url(/res/border-bottom-left-edge.png), 
+    url(/res/border-badge.png), url(res/border-bottom-right-edge.png), #000;
+  background-position: 0 bottom, 50% bottom, 99.95% bottom;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 77px;
+}
+
+/* the bars in between the edge and badge */
+
+.rsc-border-bar {
+  width: 100%;
+}
+
+.rsc-border-bar::before, .rsc-border-bar::after {
+  background-repeat: round, no-repeat;
+  content: '';
+  display: block;
+  height: 43px;
+  position: absolute;
+  width: calc(50% - 102px - 92px + 0.5px);
+}
+
+.rsc-border-bar::before {
+  background-image: url(/res/border-bar-left.png);
+  left: 101.5px;
+}
+
+.rsc-border-bar::after {
+  background-image: url(/res/border-bar-right.png);
+  right: 101.5px;
+}
+
+.rsc-border-bottom::after, .rsc-border-bottom::before {
+  bottom: 0;
+}
+
+/* button wheel */
+
+.rsc-button-wheel {
+  display: block;
+  height: 324px;
+  margin: 0 auto 0 auto;
+  max-width: 584px; /* 524 */
+  position: relative;
+  width: 100%;
+}
+
+.rsc-button {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.rsc-button:hover, .rsc-button:focus {
+  filter: brightness(115%);
+}
+
+.rsc-stone-button {
+  background: url(/res/stone-button.png) no-repeat;
+  color: #e0d8c0;
+  font-size: 18px;
+  height: 74px;
+  width: 102px;
+  margin: -37px -51px;
+}
+
+.rsc-play-button {
+  background: url(/res/play-button.png) no-repeat;
+  color: #e03010;
+  font-size: 32px;
+  height: 146px;
+  left: 50%;
+  margin: -73px -99px -73px -99px;
+  top: 50%;
+  width: 198px;
+}
+
+.rsc-stone-button:nth-child(2) {
+  left: 24%;
+  top: 20%;
+}
+
+.rsc-stone-button:nth-child(3) {
+  left: 16%;
+  top: 50%;
+}
+
+.rsc-stone-button:nth-child(4) {
+  left: 24%;
+  top: 80%;
+}
+
+.rsc-stone-button:nth-child(5) {
+  left: 50%;
+  top: 90%;
+}
+
+.rsc-stone-button:nth-child(6) {
+  right: 24%;
+  top: 80%;
+}
+
+.rsc-stone-button:nth-child(7) {
+  right: 16%;
+  top: 50%;
+}
+
+.rsc-stone-button:nth-child(8) {
+  right: 24%;
+  top: 20%;
+}
+
+/* game select */
+
+.rsc-game-select-wrap {
+  height: 372px;
+  margin-bottom: -24px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 584px;
+  position: relative;
+}
+
+.rsc-game-select {
+  height: 372px;
+  position: absolute;
+  width: 262px;
+}
+
+.rsc-game-select a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.rsc-select-free {
+  background: url(/res/knight.png) no-repeat;
+  left: -1px;
+}
+
+.rsc-select-members {
+  background: url(/res/wizard.png) no-repeat;
+  right: -1px;
+}
+
+.rsc-game-select:hover {
+  filter: brightness(115%);
+}
+
+.rsc-select-button {
+  box-sizing: border-box;
+  font-weight: bold;
+  height: 92px;
+  padding: 16px;
+  position: absolute;
+  text-align: center;
+  width: 160px;
+}
+
+.rsc-select-button small {
+  font-size: 13px;
+  opacity: 0.8;
+  display: block;
+}
+
+.rsc-select-button strong {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.rsc-select-free .rsc-select-button {
+  left: 18px;
+  top: 82px;
+}
+
+.rsc-select-members .rsc-select-button {
+  right: 18px;
+  top: 86px;
+}
+
+/* hiscores */
+
+.rsc-hiscores-skills {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.rsc-hiscores-skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rsc-hiscores-ranks {
+  text-align: left;
+}
+
+.rsc-hiscores-ranks table {
+  border-spacing: 0;
+  margin: 4px auto 4px auto;
+  table-layout: fixed;
+  width: 90%;
+}
+
+.rsc-hiscores-ranks td {
+  padding: 0;
+}
+
+.rsc-col-rank {
+  width: 16%;
+}
+
+.rsc-col-name {
+  width: 38%;
+  word-wrap: break-word;
+}
+
+.rsc-col-level {
+  width: 16%;
+}
+
+.rsc-col-xp {
+  width: 30%;
+  word-wrap: break-word;
+}
+
+@media (max-width: 540px) {
+  .rsc-container {
+    background-size: 10% auto, 10% auto, auto auto;
+  }
+
+  .rsc-wrap {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .rsc-box, .rsc-stone-box {
+    margin-bottom: 16px;
+  }
+
+  .rsc-scroll {
+    padding-top: 34px;
+    padding-bottom: 30px;
+  }
+
+  .rsc-header {
+    min-width: 172px;
+  }
+
+  .rsc-footer {
+    margin-left: 25%;
+    width: 50%;
+  }
+
+  /* stretch the badge and remove the two bars */
+
+  .rsc-border-bar {
+    background-size: 25% 100%, 50% 43px, 25% 100%;
+  }
+
+  .rsc-border-bar::after, .rsc-border-bar::before {
+    display: none;
+  }
+
+  .rsc-logo {
+    width: 90%;
+  }
+
+  /* give the hiscores a bit more space */
+
+  .rsc-hiscores-ranks table {
+    width: 100%;
+  }
+
+  /* stack the buttons vertically rather than the circle pattern */
+
+  .rsc-button-wheel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rsc-button {
+    margin: 8px;
+    position: static;
+  }
+
+  /* stack the rows vertically as well */
+
+  .rsc-row {
+    flex-direction: column;
+  }
+
+  /* stack our columns */
+  .rsc-col {
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 614px) {
+  .rsc-game-select-wrap {
+    height: 558px;
+  }
+
+  .rsc-game-select, .rsc-select-button {
+    transform: scaleX(-1);
+  }
+
+  .rsc-select-members {
+    top: 182px;
+  }
+}
